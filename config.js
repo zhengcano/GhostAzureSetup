@@ -11,7 +11,16 @@ config = {
     // Configure your URL and mail settings here
     production: {
         url: 'http://robertzheng.azurewebsites.net/',
-        mail: {},
+        mail: {
+            transport: 'SMTP',
+            options: {
+                service: 'Gmail',
+                auth: {
+                    user: 'zhengbkp@gmail.com',
+                    pass: 'Corsec!23'
+                }
+            }
+        },
         database: {
             client: 'sqlite3',
             connection: {
